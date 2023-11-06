@@ -6,11 +6,16 @@ const app = Vue.createApp({
       show: true,
     };
   },
+  computed: {
+    btnCaption() {
+      return this.show ? "Hide List" : "Show List";
+    },
+  },
   methods: {
     addTask() {
       this.tasks.push(this.givenTask);
     },
-    toggleBtn() {
+    toggleList() {
       this.show = !this.show;
     },
   },
